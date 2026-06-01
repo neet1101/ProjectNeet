@@ -16,4 +16,9 @@ public class CalculatorTest {
         Calculator c = new Calculator();
         Assertions.assertThrows(ArithmeticException.class, () -> c.divide(4, 0));
     }
+    @Test
+    void testMultiplyTwoNumbers() {
+        Calculator c = new Calculator();
+        assertEquals(12.0, c.multiply(3, 4));
+    }
 }

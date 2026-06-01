@@ -17,4 +17,7 @@ public class Calculator {
         return i / j;
     }
        
+      public double multiply(double i, double j) {
+        return i * j;
+    }
 }
