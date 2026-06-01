@@ -10,7 +10,10 @@ package com.mycompany.calculator;
  */
 public class Calculator {
 
-     public int divide(int i, int j) {
+     public double divide(double i, double j) {
+        if (j == 0) {
+            throw new ArithmeticException("Can not divide by zero");
+        }
         return i / j;
     }
        

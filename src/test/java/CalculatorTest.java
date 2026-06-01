@@ -1,22 +1,19 @@
 import com.mycompany.calculator.Calculator;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
 
-    @Test
-    void testDivideNumbers() {
+   @Test
+    void testDivideTwoNumbers() {
         Calculator c = new Calculator();
-
-        assertEquals(2, c.divide(4, 2));
+        assertEquals(2.0, c.divide(4, 2));
     }
 
     @Test
     void testDivideByZero() {
         Calculator c = new Calculator();
-
-        assertThrows(ArithmeticException.class, () -> {
-            c.divide(4, 0);
-        });
+        Assertions.assertThrows(ArithmeticException.class, () -> c.divide(4, 0));
     }
 }
